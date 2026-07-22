@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {BookingService} from '../../core/services/booking';
-import { TutorService } from '../../core/services/tutor.service';
+import {BookingService} from '../../../core/services/booking';
+import { TutorService } from '../../../core/services/tutor.service';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 

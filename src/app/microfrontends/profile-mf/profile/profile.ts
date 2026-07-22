@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthService, User } from '../../core/services/auth';
+import { AuthService ,User} from '../../../core/services/auth';
+
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +10,7 @@ import { AuthService, User } from '../../core/services/auth';
   templateUrl: './profile.html',
   styleUrls: ['./profile.css'],
 })
-export class Profile implements OnInit {
+export class ProfileComponent implements OnInit {
 
   user: User | null = null;
 
