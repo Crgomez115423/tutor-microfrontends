@@ -1,9 +1,11 @@
 import {Component, OnInit, inject} from '@angular/core';
-import {DashboardService} from '../../core/services/dashboard';
-import { SidebarComponent } from '../../shared/sidebar/sidebar';
+import {DashboardService} from '../../../core/services/dashboard';
+import { SidebarComponent } from '../../../shared/sidebar/sidebar';
 import {Router} from '@angular/router';
-import { BookingService } from '../../core/services/booking';
-import { TutorService } from '../../core/services/tutor.service';
+import { BookingService } from '../../../core/services/booking';
+
+
+import { TutorService } from '../../../core/services/tutor.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,7 +15,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
-export class Dashboard implements OnInit {
+export class DashboardComponent implements OnInit {
 
   studentName = '';
 

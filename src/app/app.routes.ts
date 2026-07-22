@@ -1,14 +1,20 @@
 import { Routes } from '@angular/router';
-import {Dashboard} from './pages/dashboard/dashboard';
-import {BookingComponent} from './pages/booking/booking';
-import {HistoryComponent} from './pages/history/history';import {Profile}from './pages/profile/profile';import {LoginComponent} from './pages/login/login';
+
+import { DashboardComponent } from './microfrontends/dashboard-mf/dashboard/dashboard';
+import { BookingComponent } from './microfrontends/booking-mf/booking/booking';
+import { HistoryComponent } from './microfrontends/history-mf/history/history';
+import { ProfileComponent } from './microfrontends/profile-mf/profile/profile';
+import { LoginComponent } from './microfrontends/auth-mf/login/login';
+
 import { TutorsComponent } from './pages/tutors/tutors';
+
 import { AuthGuard } from './core/services/auth.guard';
 
 export const routes: Routes = [
+
   {
     path: '',
-    component: Dashboard,
+    component: DashboardComponent,
     canActivate: [AuthGuard]
   },
 
@@ -23,20 +29,22 @@ export const routes: Routes = [
     component: HistoryComponent,
     canActivate: [AuthGuard]
   },
+
   {
     path: 'profile',
-    component: Profile,
+    component: ProfileComponent,
     canActivate: [AuthGuard]
   },
+
   {
     path: 'tutors',
     component: TutorsComponent,
     canActivate: [AuthGuard]
   },
+
   {
     path: 'login',
     component: LoginComponent
   }
-
 
 ];

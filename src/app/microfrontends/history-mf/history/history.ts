@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { BookingService } from '../../core/services/booking';
+import { BookingService } from '../../../core/services/booking';
 
 @Component({
   selector: 'app-history',
