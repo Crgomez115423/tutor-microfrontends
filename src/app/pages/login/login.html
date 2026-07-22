@@ -1,0 +1,30 @@
+<div class="page-root">
+  <div class="login-card">
+    <header class="login-header">
+      <div>
+        <h1 class="app-name">TutorConnect</h1>
+        <p class="app-description">Gestiona tus tutorías, ve tu historial y mantén tu perfil actualizado desde una sola plataforma.</p>
+      </div>
+    </header>
+
+    <h2 class="title">Iniciar sesión</h2>
+
+    <form (ngSubmit)="login()" class="login-form">
+      <div class="form-group">
+        <label>Usuario</label>
+        <input type="text" [(ngModel)]="username" name="username" />
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" [(ngModel)]="password" name="password" />
+      </div>
+
+      <div class="error" *ngIf="error">{{ error }}</div>
+
+      <div class="actions">
+        <button type="submit" class="btn">Entrar</button>
+      </div>
+    </form>
+  </div>
+</div>

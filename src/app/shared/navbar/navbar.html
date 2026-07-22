@@ -1,0 +1,13 @@
+<nav class="navbar">
+	<a class="nav-item" (click)="router.navigate(['/'])">Inicio</a>
+
+	<div class="nav-right">
+		<ng-container *ngIf="(auth.currentUser$ | async) as user; else loggedOut">
+			<span class="username">Hola, {{ user.username }}</span>
+			<a class="nav-item" (click)="logout()">Cerrar sesión</a>
+		</ng-container>
+		<ng-template #loggedOut>
+			<a class="nav-item" (click)="router.navigate(['/login'])">Iniciar sesión</a>
+		</ng-template>
+	</div>
+</nav>
